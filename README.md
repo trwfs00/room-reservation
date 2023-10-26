@@ -1,7 +1,5 @@
 # room-reservation
 
-## API Documentation
-
 ## Booking API
 
 The Booking API provides endpoints for managing bookings for rooms with associated users, dates, and timeslots. This API is built using Node.js and the Express framework, with data storage managed through MongoDB using Mongoose.
