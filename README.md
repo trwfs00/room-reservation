@@ -264,3 +264,58 @@ All endpoints handle errors and return appropriate status codes and error messag
 ## Conclusion
 
 This API allows you to create, retrieve, update, and delete timeslots, making it a useful tool for managing time-based information in your application.
+
+
+
+## User API Documentation
+
+The User API allows you to manage user accounts with details such as email, password, full name, phone number, and user role. This API is built using Node.js and the Express framework, with data storage managed through MongoDB using Mongoose.
+
+### Models
+
+#### User
+
+This is the user model defined in `./Models/User.js`.
+
+- **Email**: The user's email address.
+- **Password**: The user's password (hashed for security).
+- **FullName**: The user's full name.
+- **Tel**: The user's phone number.
+- **Role**: The user's role, with options 'user' and 'admin'.
+- **CreatedAt**: The date the user account was created.
+
+## Routes
+
+### Update User Information
+
+- **HTTP Method**: PUT
+- **Endpoint**: `/update/:userId`
+- **Description**: Update user information, including full name and phone number.
+- **Request Parameters**:
+  - `userId`: The unique identifier of the user to update.
+- **Request Body**:
+  - `fullName`: The user's full name.
+  - `tel`: The user's phone number.
+- **Response**:
+  - If successful, returns a message indicating the successful update.
+- **Error Responses**:
+  - 404 Not Found: If the user with the specified ID does not exist.
+  - 500 Internal Server Error: If an error occurs during the update.
+
+### Get All Users
+
+- **HTTP Method**: GET
+- **Endpoint**: `/`
+- **Description**: Retrieve a list of all users.
+- **Response**: Returns a list of all user accounts.
+- **Error Response**:
+  - 500 Internal Server Error: If an error occurs while fetching users.
+
+## Error Handling
+
+All endpoints handle errors and return appropriate status codes and error messages when needed.
+
+## Conclusion
+
+This API allows you to create, retrieve, and update user information, making it a useful tool for managing user accounts in your application.
+
