@@ -1,5 +1,59 @@
 # room-reservation
 
+## Search API Documentation
+
+The Search API provides endpoints for searching available rooms, timeslots, and booking history based on specified criteria. This API is built using Node.js and the Express framework, with data storage managed through MongoDB using Mongoose.
+
+### Routes
+
+#### Search Available Rooms
+
+- **HTTP Method**: POST
+- **Endpoint**: `/available-rooms`
+- **Description**: Find available rooms for a specific date and timeslot.
+- **Request Body**:
+  - `date`: The date for which availability is checked (in string format).
+  - `timeslotId`: The unique identifier of the timeslot.
+- **Response**:
+  - Returns a list of available rooms.
+- **Error Responses**:
+  - 500 Internal Server Error: If an error occurs during the search for available rooms.
+
+### Search Available Timeslots
+
+- **HTTP Method**: POST
+- **Endpoint**: `/available-timeslots`
+- **Description**: Find available timeslots for a specific date and room.
+- **Request Body**:
+  - `date`: The date for which availability is checked (in string format).
+  - `roomId`: The unique identifier of the room.
+- **Response**:
+  - Returns a list of available timeslots.
+- **Error Responses**:
+  - 500 Internal Server Error: If an error occurs during the search for available timeslots.
+
+### Search Booking History
+
+- **HTTP Method**: POST
+- **Endpoint**: `/history`
+- **Description**: Retrieve booking history for a specific user.
+- **Request Body**:
+  - `userId`: The unique identifier of the user.
+- **Response**:
+  - Returns a list of booking history for the user.
+- **Error Responses**:
+  - 404 Not Found: If no bookings are found for the user.
+  - 500 Internal Server Error: If an error occurs during the search for booking history.
+
+### Error Handling
+
+All endpoints handle errors and return appropriate status codes and error messages when needed.
+
+### Conclusion
+
+This API provides search functionality to find available rooms and timeslots based on specific criteria and retrieve booking history for a user, making it a valuable tool for managing reservations and bookings in your application.
+
+
 ## Booking API Documentation
 
 The Booking API provides endpoints for managing bookings for rooms with associated users, dates, and timeslots. This API is built using Node.js and the Express framework, with data storage managed through MongoDB using Mongoose.
