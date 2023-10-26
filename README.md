@@ -18,6 +18,8 @@ The Search API provides endpoints for searching available rooms, timeslots, and 
   - Returns a list of available rooms.
 - **Error Responses**:
   - 500 Internal Server Error: If an error occurs during the search for available rooms.
+- **Example URL**:
+  - POST: `localhost:8080/api/search/available-rooms`
 
 ### Search Available Timeslots
 
@@ -31,6 +33,8 @@ The Search API provides endpoints for searching available rooms, timeslots, and 
   - Returns a list of available timeslots.
 - **Error Responses**:
   - 500 Internal Server Error: If an error occurs during the search for available timeslots.
+- **Example URL**:
+  - POST: `localhost:8080/api/search/available-timeslots`
 
 ### Search Booking History
 
@@ -44,6 +48,8 @@ The Search API provides endpoints for searching available rooms, timeslots, and 
 - **Error Responses**:
   - 404 Not Found: If no bookings are found for the user.
   - 500 Internal Server Error: If an error occurs during the search for booking history.
+- **Example URL**:
+  - POST: `localhost:8080/api/search/history`
 
 ### Error Handling
 
@@ -86,6 +92,8 @@ This is the booking model defined in `./models/Booking.js`.
 - **Error Responses**:
   - 400 Bad Request: If the booking date is in the past or a booking already exists for the same date, timeslot, and room.
   - 500 Internal Server Error: If an error occurs during booking creation.
+- **Example URL**:
+  - POST: `localhost:8080/api/bookings/create`
 
 ### Get All Bookings
 
@@ -95,6 +103,9 @@ This is the booking model defined in `./models/Booking.js`.
 - **Response**: Returns a list of all bookings with room, user, and timeslot details.
 - **Error Response**:
   - 500 Internal Server Error: If an error occurs while fetching bookings.
+- **Example URL**:
+  - GET: `localhost:8080/api/bookings`
+
 
 ### Find Bookings by Date
 
@@ -107,6 +118,8 @@ This is the booking model defined in `./models/Booking.js`.
 - **Error Responses**:
   - 400 Bad Request: If the `bookingDate` is not provided in the request body.
   - 500 Internal Server Error: If an error occurs while fetching bookings.
+- **Example URL**:
+  - POST: `localhost:8080/api/bookings/findByDate`
 
 ### Get a Single Booking
 
@@ -117,6 +130,8 @@ This is the booking model defined in `./models/Booking.js`.
 - **Error Responses**:
   - 404 Not Found: If the booking with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while fetching the booking.
+- **Example URL**:
+  - GET: `localhost:8080/api/bookings/:id`
 
 ### Update a Booking
 
@@ -132,6 +147,8 @@ This is the booking model defined in `./models/Booking.js`.
 - **Error Responses**:
   - 404 Not Found: If the booking with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while updating the booking.
+- **Example URL**:
+  - PUT: `localhost:8080/api/bookings/:id`
 
 ### Delete a Booking
 
@@ -142,6 +159,8 @@ This is the booking model defined in `./models/Booking.js`.
 - **Error Responses**:
   - 404 Not Found: If the booking with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while deleting the booking.
+- **Example URL**:
+  - DELETE: `localhost:8080/api/bookings/:id`
 
 ### Error Handling
 
@@ -186,6 +205,8 @@ This is the room model defined in `./models/Room.js`.
   - If successful, returns the created room.
 - **Error Responses**:
   - 500 Internal Server Error: If an error occurs during room creation.
+- **Example URL**:
+  - POST: `localhost:8080/api/rooms`
 
 ### Get All Rooms
 
@@ -195,6 +216,8 @@ This is the room model defined in `./models/Room.js`.
 - **Response**: Returns a list of all rooms sorted by creation date.
 - **Error Response**:
   - 500 Internal Server Error: If an error occurs while fetching rooms.
+- **Example URL**:
+  - GET: `localhost:8080/api/rooms`
 
 ### Get a Single Room by ID
 
@@ -205,6 +228,9 @@ This is the room model defined in `./models/Room.js`.
 - **Error Responses**:
   - 404 Not Found: If the room with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while fetching the room.
+- **Example URL**:
+  - GET: `localhost:8080/api/rooms/:id`
+
 
 ### Update a Room by ID
 
@@ -221,6 +247,8 @@ This is the room model defined in `./models/Room.js`.
 - **Error Responses**:
   - 404 Not Found: If the room with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while updating the room.
+- **Example URL**:
+  - PUT: `localhost:8080/api/rooms/:id`
 
 ### Delete a Room by ID
 
@@ -231,6 +259,8 @@ This is the room model defined in `./models/Room.js`.
 - **Error Responses**:
   - 404 Not Found: If the room with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while deleting the room.
+- **Example URL**:
+  - DELETE: `localhost:8080/api/rooms/:id`
 
 ### Error Handling
 
@@ -268,6 +298,8 @@ This is the timeslot model defined in `./models/Timeslot.js`.
   - If successful, returns the created timeslot.
 - **Error Responses**:
   - 500 Internal Server Error: If an error occurs during timeslot creation.
+- **Example URL**:
+  - POST: `localhost:8080/api/timeslots`
 
 ### Get All Timeslots
 
@@ -277,6 +309,8 @@ This is the timeslot model defined in `./models/Timeslot.js`.
 - **Response**: Returns a list of all timeslots.
 - **Error Response**:
   - 500 Internal Server Error: If an error occurs while fetching timeslots.
+- **Example URL**:
+  - GET: `localhost:8080/api/timeslots`
 
 ### Get a Single Timeslot by ID
 
@@ -287,6 +321,8 @@ This is the timeslot model defined in `./models/Timeslot.js`.
 - **Error Responses**:
   - 404 Not Found: If the timeslot with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while fetching the timeslot.
+- **Example:
+  - GET: `localhost:8080/api/timeslots/:id`
 
 ### Update a Timeslot by ID
 
@@ -300,6 +336,9 @@ This is the timeslot model defined in `./models/Timeslot.js`.
 - **Error Responses**:
   - 404 Not Found: If the timeslot with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while updating the timeslot.
+- **Example URL**:
+  - PUT: `localhost:8080/api/timeslots/:id`
+
 
 ### Delete a Timeslot by ID
 
@@ -310,6 +349,8 @@ This is the timeslot model defined in `./models/Timeslot.js`.
 - **Error Responses**:
   - 404 Not Found: If the timeslot with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while deleting the timeslot.
+- **Example URL**:
+  - DELETE: `localhost:8080/api/timeslots/:id`
 
 ### Error Handling
 
@@ -355,6 +396,8 @@ This is the user model defined in `./Models/User.js`.
 - **Error Responses**:
   - 404 Not Found: If the user with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs during the update.
+- **Example URL**:
+  - PUT: `localhost:8080/api/users/update/:userId`
 
 ### Get All Users
 
@@ -364,6 +407,8 @@ This is the user model defined in `./Models/User.js`.
 - **Response**: Returns a list of all user accounts.
 - **Error Response**:
   - 500 Internal Server Error: If an error occurs while fetching users.
+- **Example URL**:
+  - GET: `localhost:8080/api/users`
 
 ### Error Handling
 
