@@ -93,7 +93,7 @@ This is the booking model defined in `./models/Booking.js`.
 
 All endpoints handle errors and return appropriate status codes and error messages when needed.
 
-## Conclusion
+### Conclusion
 
 This API allows you to create, retrieve, update, and delete bookings for rooms on specific dates and timeslots. It provides endpoints for various booking-related operations, making it a useful tool for managing reservations and bookings in your application.
 
@@ -178,11 +178,11 @@ This is the room model defined in `./models/Room.js`.
   - 404 Not Found: If the room with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while deleting the room.
 
-## Error Handling
+### Error Handling
 
 All endpoints handle errors and return appropriate status codes and error messages when needed.
 
-## Conclusion
+### Conclusion
 
 This API allows you to create, retrieve, update, and delete room information, making it a useful tool for managing room details in your application.
 
@@ -257,11 +257,11 @@ This is the timeslot model defined in `./models/Timeslot.js`.
   - 404 Not Found: If the timeslot with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while deleting the timeslot.
 
-## Error Handling
+### Error Handling
 
 All endpoints handle errors and return appropriate status codes and error messages when needed.
 
-## Conclusion
+### Conclusion
 
 This API allows you to create, retrieve, update, and delete timeslots, making it a useful tool for managing time-based information in your application.
 
@@ -311,11 +311,11 @@ This is the user model defined in `./Models/User.js`.
 - **Error Response**:
   - 500 Internal Server Error: If an error occurs while fetching users.
 
-## Error Handling
+### Error Handling
 
 All endpoints handle errors and return appropriate status codes and error messages when needed.
 
-## Conclusion
+### Conclusion
 
 This API allows you to create, retrieve, and update user information, making it a useful tool for managing user accounts in your application.
 
