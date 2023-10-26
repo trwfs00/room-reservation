@@ -186,3 +186,81 @@ All endpoints handle errors and return appropriate status codes and error messag
 
 This API allows you to create, retrieve, update, and delete room information, making it a useful tool for managing room details in your application.
 
+
+## Timeslot API Documentation
+
+The Timeslot API allows you to manage timeslots with details such as start time and end time. This API is built using Node.js and the Express framework, with data storage managed through MongoDB using Mongoose.
+
+### Models
+
+#### Timeslot
+
+This is the timeslot model defined in `./models/Timeslot.js`.
+
+- **StartTime**: The start time of the timeslot.
+- **EndTime**: The end time of the timeslot.
+
+## Routes
+
+### Create a Timeslot
+
+- **HTTP Method**: POST
+- **Endpoint**: `/`
+- **Description**: Create a new timeslot.
+- **Request Body**:
+  - `StartTime`: The start time of the timeslot.
+  - `EndTime`: The end time of the timeslot.
+- **Response**:
+  - If successful, returns the created timeslot.
+- **Error Responses**:
+  - 500 Internal Server Error: If an error occurs during timeslot creation.
+
+### Get All Timeslots
+
+- **HTTP Method**: GET
+- **Endpoint**: `/`
+- **Description**: Retrieve a list of all timeslots.
+- **Response**: Returns a list of all timeslots.
+- **Error Response**:
+  - 500 Internal Server Error: If an error occurs while fetching timeslots.
+
+### Get a Single Timeslot by ID
+
+- **HTTP Method**: GET
+- **Endpoint**: `/:id`
+- **Description**: Retrieve a single timeslot by its unique identifier.
+- **Response**: Returns the timeslot details.
+- **Error Responses**:
+  - 404 Not Found: If the timeslot with the specified ID does not exist.
+  - 500 Internal Server Error: If an error occurs while fetching the timeslot.
+
+### Update a Timeslot by ID
+
+- **HTTP Method**: PUT
+- **Endpoint**: `/:id`
+- **Description**: Update a timeslot by its unique identifier.
+- **Request Body**:
+  - `StartTime`: The start time of the timeslot.
+  - `EndTime`: The end time of the timeslot.
+- **Response**: Returns the updated timeslot.
+- **Error Responses**:
+  - 404 Not Found: If the timeslot with the specified ID does not exist.
+  - 500 Internal Server Error: If an error occurs while updating the timeslot.
+
+### Delete a Timeslot by ID
+
+- **HTTP Method**: DELETE
+- **Endpoint**: `/:id`
+- **Description**: Delete a timeslot by its unique identifier.
+- **Response**: Returns a message indicating successful deletion.
+- **Error Responses**:
+  - 404 Not Found: If the timeslot with the specified ID does not exist.
+  - 500 Internal Server Error: If an error occurs while deleting the timeslot.
+
+## Error Handling
+
+All endpoints handle errors and return appropriate status codes and error messages when needed.
+
+## Conclusion
+
+This API allows you to create, retrieve, update, and delete timeslots, making it a useful tool for managing time-based information in your application.
