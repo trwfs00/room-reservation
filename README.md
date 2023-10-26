@@ -15,9 +15,9 @@ This is the booking model defined in `./models/Booking.js`.
 - **BookingDate**: The date for which the booking is made (in string format).
 - **TimeslotID**: The unique identifier for the timeslot associated with the booking.
 
-### Routes
+## Routes
 
-#### Create a Booking
+### Create a Booking
 
 - **HTTP Method**: POST
 - **Endpoint**: `/create`
@@ -33,7 +33,7 @@ This is the booking model defined in `./models/Booking.js`.
   - 400 Bad Request: If the booking date is in the past or a booking already exists for the same date, timeslot, and room.
   - 500 Internal Server Error: If an error occurs during booking creation.
 
-#### Get All Bookings
+### Get All Bookings
 
 - **HTTP Method**: GET
 - **Endpoint**: `/`
@@ -42,7 +42,7 @@ This is the booking model defined in `./models/Booking.js`.
 - **Error Response**:
   - 500 Internal Server Error: If an error occurs while fetching bookings.
 
-#### Find Bookings by Date
+### Find Bookings by Date
 
 - **HTTP Method**: POST
 - **Endpoint**: `/findByDate`
@@ -54,7 +54,7 @@ This is the booking model defined in `./models/Booking.js`.
   - 400 Bad Request: If the `bookingDate` is not provided in the request body.
   - 500 Internal Server Error: If an error occurs while fetching bookings.
 
-#### Get a Single Booking
+### Get a Single Booking
 
 - **HTTP Method**: GET
 - **Endpoint**: `/:id`
@@ -64,7 +64,7 @@ This is the booking model defined in `./models/Booking.js`.
   - 404 Not Found: If the booking with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while fetching the booking.
 
-#### Update a Booking
+### Update a Booking
 
 - **HTTP Method**: PUT
 - **Endpoint**: `/:id`
@@ -79,7 +79,7 @@ This is the booking model defined in `./models/Booking.js`.
   - 404 Not Found: If the booking with the specified ID does not exist.
   - 500 Internal Server Error: If an error occurs while updating the booking.
 
-#### Delete a Booking
+### Delete a Booking
 
 - **HTTP Method**: DELETE
 - **Endpoint**: `/:id`
