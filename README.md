@@ -99,13 +99,13 @@ This API allows you to create, retrieve, update, and delete bookings for rooms o
 
 
 
-# Room API Documentation
+## Room API Documentation
 
 The Room API allows you to manage rooms with details such as room number, name, description, capacity, and location. This API is built using Node.js and the Express framework, with data storage handled through MongoDB using Mongoose.
 
-## Models
+### Models
 
-### Room
+#### Room
 
 This is the room model defined in `./models/Room.js`.
 
